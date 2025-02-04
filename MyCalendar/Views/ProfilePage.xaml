@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyCalendar.Views.ProfilePage"
+             Title="mine"
+             BackgroundColor="#1E1E2D">
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="20" Padding="20">
+            <!-- Header -->
+            <Grid ColumnDefinitions="Auto,*">
+                <Image Source="settings.png" 
+                       HeightRequest="24"
+                       WidthRequest="24"/>
+                <Label Grid.Column="1"
+                       Text="Mine"
+                       TextColor="White"
+                       FontSize="24"
+                       HorizontalOptions="Center"/>
+            </Grid>
+
+            <!-- Profile Info Card -->
+            <Frame BackgroundColor="#252542"
+                   Padding="20"
+                   CornerRadius="20"
+                   HasShadow="False">
+                <VerticalStackLayout Spacing="20">
+                    <!-- User Info -->
+                    <Grid ColumnDefinitions="Auto,*,Auto">
+                        <Frame HeightRequest="60" 
+                               WidthRequest="60"
+                               CornerRadius="30"
+                               Padding="0"
+                               BackgroundColor="#FFE4E1"
+                               IsClippedToBounds="True">
+                            <Grid>
+                                <Image Source="profile.png"
+                                       Aspect="AspectFill"/>
+                                <Frame HeightRequest="24" 
+                                       WidthRequest="24"
+                                       CornerRadius="12"
+                                       Padding="0"
+                                       BackgroundColor="#4285F4"
+                                       VerticalOptions="End"
+                                       HorizontalOptions="End"
+                                       Margin="0,0,-5,-5">
+                                    <Label Text="G"
+                                           TextColor="White"
+                                           HorizontalOptions="Center"
+                                           VerticalOptions="Center"/>
+                                </Frame>
+                            </Grid>
+                        </Frame>
+                        <VerticalStackLayout Grid.Column="1" 
+                                           Spacing="5"
+                                           Margin="15,0">
+                            <Label Text="Katlego Kate"
+                                   TextColor="White"
+                                   FontSize="18"/>
+                            <Label Text="katlegokatenguyuza01@gmail.com"
+                                   TextColor="#6B6B6B"
+                                   FontSize="14"/>
+                            <Label Text="Last sync time: Jan 26"
+                                   TextColor="#6B6B6B"
+                                   FontSize="14"/>
+                        </VerticalStackLayout>
+                        <Image Grid.Column="2"
+                               Source="chevron_right.png"
+                               HeightRequest="24"
+                               WidthRequest="24"/>
+                    </Grid>
+
+                    <!-- Quick Actions -->
+                    <Grid ColumnDefinitions="*,*,*,*" ColumnSpacing="15">
+                        <!-- Settings -->
+                        <Frame Grid.Column="0" 
+                               BackgroundColor="#3F3355"
+                               CornerRadius="15"
+                               Padding="10"
+                               HasShadow="False">
+                            <VerticalStackLayout Spacing="5">
+                                <Image Source="settings.png"
+                                       HeightRequest="24"
+                                       HorizontalOptions="Center"/>
+                                <Label Text="Settings"
+                                       TextColor="#6B6B6B"
+                                       FontSize="12"
+                                       HorizontalOptions="Center"/>
+                            </VerticalStackLayout>
+                        </Frame>
+                        <!-- Reminders -->
+                        <Frame Grid.Column="1"
+                               BackgroundColor="#3F3355"
+                               CornerRadius="15"
+                               Padding="10"
+                               HasShadow="False">
+                            <VerticalStackLayout Spacing="5">
+                                <Image Source="bell.png"
+                                       HeightRequest="24"
+                                       HorizontalOptions="Center"/>
+                                <Label Text="Reminders"
+                                       TextColor="#6B6B6B"
+                                       FontSize="12"
+                                       HorizontalOptions="Center"/>
+                            </VerticalStackLayout>
+                        </Frame>
+                        <!-- Theme -->
+                        <Frame Grid.Column="2"
+                               BackgroundColor="#3F3355"
+                               CornerRadius="15"
+                               Padding="10"
+                               HasShadow="False">
+                            <VerticalStackLayout Spacing="5">
+                                <Image Source="tshirt.png"
+                                       HeightRequest="24"
+                                       HorizontalOptions="Center"/>
+                                <Label Text="Theme"
+                                       TextColor="#6B6B6B"
+                                       FontSize="12"
+                                       HorizontalOptions="Center"/>
+                            </VerticalStackLayout>
+                        </Frame>
+                        <!-- Feedback -->
+                        <Frame Grid.Column="3"
+                               BackgroundColor="#3F3355"
+                               CornerRadius="15"
+                               Padding="10"
+                               HasShadow="False">
+                            <VerticalStackLayout Spacing="5">
+                                <Image Source="paper_airplane.png"
+                                       HeightRequest="24"
+                                       HorizontalOptions="Center"/>
+                                <Label Text="Feedback"
+                                       TextColor="#6B6B6B"
+                                       FontSize="12"
+                                       HorizontalOptions="Center"/>
+                            </VerticalStackLayout>
+                        </Frame>
+                    </Grid>
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Goals Section -->
+            <!-- Goals Section -->
+            <Frame BackgroundColor="#252542" 
+       Padding="20"
+       CornerRadius="20"
+       HasShadow="False">
+                <VerticalStackLayout Spacing="20">
+                    <Grid ColumnDefinitions="Auto,*">
+                        <Image Source="target.png"
+                   HeightRequest="24"/>
+                        <Label Grid.Column="1"
+                   Text="My goal"
+                   TextColor="White"
+                   FontSize="20"/>
+                    </Grid>
+
+                    <!-- Scrollable Content -->
+                    <ScrollView Orientation="Vertical"
+                    VerticalScrollBarVisibility="Never"
+                    HeightRequest="60">
+                        <HorizontalStackLayout Spacing="10">
+                            <Button Text="Track my period"
+                        BackgroundColor="#3F3355"
+                        TextColor="White"
+                        CornerRadius="20"
+                        Padding="15,10"/>
+                            <Button Text="Try to conceive"
+                        BackgroundColor="#2B2B2B"
+                        TextColor="#6B6B6B"
+                        CornerRadius="20"
+                        BorderColor="#3F3355"
+                        BorderWidth="1"
+                        Padding="15,10"/>
+                            <Button Text="Track my pregnancy"
+                        BackgroundColor="#2B2B2B"
+                        TextColor="#6B6B6B"
+                        CornerRadius="20"
+                        BorderColor="#3F3355"
+                        BorderWidth="1"
+                        Padding="15,10"/>
+                        </HorizontalStackLayout>
+                    </ScrollView>
+
+                    <Grid RowDefinitions="Auto,Auto" RowSpacing="15">
+                        <Grid ColumnDefinitions="Auto,*,Auto">
+                            <Image Source="drop.png"
+                       HeightRequest="24"/>
+                            <Label Grid.Column="1"
+                       Text="Period Length"
+                       TextColor="White"/>
+                            <Label Grid.Column="2"
+                       Text="5 Days"
+                       TextColor="White"/>
+                        </Grid>
+                        <Grid Grid.Row="1" ColumnDefinitions="Auto,*,Auto">
+                            <Image Source="cycle.png"
+                       HeightRequest="24"/>
+                            <Label Grid.Column="1"
+                       Text="Cycle Length"
+                       TextColor="White"/>
+                            <Label Grid.Column="2"
+                       Text="28 Days"
+                       TextColor="White"/>
+                        </Grid>
+                    </Grid>
+
+                    <Button Text="My Profile"
+                TextColor="#6B6B6B"
+                BackgroundColor="Transparent"
+                FontSize="14">
+                        <Button.ImageSource>
+                            <FontImageSource Glyph="&#x25BC;"
+                                Color="#6B6B6B"
+                                Size="12"/>
+                        </Button.ImageSource>
+                    </Button>
+                </VerticalStackLayout>
+            </Frame>
+
+
+            <!-- Reports Section -->
+            <Grid ColumnDefinitions="*,Auto">
+                <Label Text="Reports"
+                       TextColor="White"
+                       FontSize="24"/>
+                <Image Grid.Column="1"
+                       Source="share.png"
+                       HeightRequest="24"/>
+            </Grid>
+
+            <Frame BackgroundColor="#252542" 
+                   Padding="20"
+                   CornerRadius="20"
+                   HasShadow="False">
+                <VerticalStackLayout Spacing="10">
+                    <Grid ColumnDefinitions="*,Auto">
+                        <Label Text="My cycles"
+                               TextColor="White"
+                               FontSize="20"/>
+                        <Frame Grid.Column="1"
+                               BackgroundColor="#3F3355"
+                               CornerRadius="15"
+                               Padding="10,5">
+                            <HorizontalStackLayout Spacing="5">
+                                <Label Text="103"
+                                       TextColor="White"/>
+                                <Image Source="chevron_right.png"
+                                       HeightRequest="12"/>
+                            </HorizontalStackLayout>
+                        </Frame>
+                    </Grid>
+
+                    <Label Text="103 cycles logged"
+                           TextColor="#6B6B6B"/>
+
+                    <Grid ColumnDefinitions="*,*" ColumnSpacing="15">
+                        <Frame BackgroundColor="#FFE4E1"
+                               Padding="15"
+                               CornerRadius="15"
+                               HasShadow="False">
+                            <Grid RowDefinitions="Auto,Auto" RowSpacing="5">
+                                <Label Text="5 Days"
+                                       TextColor="Black"
+                                       FontSize="20"/>
+                                <Label Grid.Row="1"
+                                       Text="Average period"
+                                       TextColor="#6B6B6B"/>
+                                <Image Source="drop.png"
+                                       HeightRequest="24"
+                                       HorizontalOptions="End"
+                                       VerticalOptions="Start"/>
+                            </Grid>
+                        </Frame>
+                        <Frame Grid.Column="1"
+                               BackgroundColor="#FFE4B5"
+                               Padding="15"
+                               CornerRadius="15"
+                               HasShadow="False">
+                            <Grid RowDefinitions="Auto,Auto" RowSpacing="5">
+                                <Label Text="27 Days"
+                                       TextColor="Black"
+                                       FontSize="20"/>
+                                <Label Grid.Row="1"
+                                       Text="Average cycle"
+                                       TextColor="#6B6B6B"/>
+                                <Image Source="cycle.png"
+                                       HeightRequest="24"
+                                       HorizontalOptions="End"
+                                       VerticalOptions="Start"/>
+                            </Grid>
+                        </Frame>
+                    </Grid>
+                </VerticalStackLayout>
+            </Frame>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

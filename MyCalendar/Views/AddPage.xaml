@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyCalendar.Views.AddPage"
+             Title="AddPage"
+              BackgroundColor="#1E1E2D">
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="20" Padding="20">
+            <!-- Header -->
+            <Grid ColumnDefinitions="Auto,*">
+                <ImageButton Source="close.png"
+                            HeightRequest="24"
+                            WidthRequest="24"
+                            BackgroundColor="Transparent"/>
+                <Label Grid.Column="1"
+                       Text="February"
+                       TextColor="White"
+                       FontSize="24"
+                       HorizontalOptions="Center"/>
+            </Grid>
+
+            <!-- Week View -->
+            <Grid ColumnDefinitions="*,*,*,*,*,*,*" 
+                  ColumnSpacing="10">
+                <Label Text="S" TextColor="#6B6B6B" HorizontalOptions="Center"/>
+                <Label Grid.Column="1" Text="M" TextColor="#6B6B6B" HorizontalOptions="Center"/>
+                <Label Grid.Column="2" Text="TODAY" TextColor="#6B6B6B" HorizontalOptions="Center"/>
+                <Label Grid.Column="3" Text="W" TextColor="#6B6B6B" HorizontalOptions="Center"/>
+                <Label Grid.Column="4" Text="T" TextColor="#6B6B6B" HorizontalOptions="Center"/>
+                <Label Grid.Column="5" Text="F" TextColor="#6B6B6B" HorizontalOptions="Center"/>
+                <Label Grid.Column="6" Text="S" TextColor="#6B6B6B" HorizontalOptions="Center"/>
+            </Grid>
+
+            <Grid ColumnDefinitions="*,*,*,*,*,*,*" 
+                  ColumnSpacing="10">
+                <Label Text="2" TextColor="White" HorizontalOptions="Center"/>
+                <Label Grid.Column="1" Text="3" TextColor="White" HorizontalOptions="Center"/>
+                <Frame Grid.Column="2" 
+                       BackgroundColor="White" 
+                       CornerRadius="20"
+                       HeightRequest="40"
+                       WidthRequest="40"
+                       Padding="0"
+                       HorizontalOptions="Center">
+                    <Label Text="4" 
+                           TextColor="Black" 
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"/>
+                </Frame>
+                <Label Grid.Column="3" Text="5" TextColor="#6B6B6B" HorizontalOptions="Center"/>
+                <Label Grid.Column="4" Text="6" TextColor="#6B6B6B" HorizontalOptions="Center"/>
+                <Label Grid.Column="5" Text="7" TextColor="#6B6B6B" HorizontalOptions="Center"/>
+                <Label Grid.Column="6" Text="8" TextColor="#6B6B6B" HorizontalOptions="Center"/>
+            </Grid>
+
+            <!-- Today Section -->
+            <Frame BackgroundColor="#252542"
+                   Padding="20"
+                   CornerRadius="20"
+                   HasShadow="False">
+                <Grid ColumnDefinitions="*,Auto">
+                    <Label Text="Today"
+                           TextColor="#A8A8A8"
+                           FontSize="18"/>
+                    <Button Grid.Column="1"
+                            Text="Edit Period"
+                            TextColor="#A8A8A8"
+                            BackgroundColor="Transparent"
+                            CornerRadius="15"/>
+                </Grid>
+            </Frame>
+
+            <!-- Write Diary -->
+            <Frame BackgroundColor="#252542"
+                   Padding="20"
+                   CornerRadius="20"
+                   HasShadow="False">
+                <VerticalStackLayout Spacing="15">
+                    <Label Text="Write diary ✍️"
+                           TextColor="White"
+                           FontSize="18"/>
+                    <Frame BackgroundColor="#1E1E2D"
+                           Padding="15"
+                           CornerRadius="15">
+                        <Entry Placeholder="Write something"
+                               PlaceholderColor="#6B6B6B"
+                               TextColor="White"
+                               BackgroundColor="Transparent"/>
+                    </Frame>
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Intercourse Section -->
+            <Frame BackgroundColor="#252542"
+                   Padding="20"
+                   CornerRadius="20"
+                   HasShadow="False">
+                <VerticalStackLayout Spacing="20">
+                    <Label Text="Intercourse"
+                           TextColor="White"
+                           FontSize="18"/>
+
+                    <Grid ColumnDefinitions="*,*,*,*" ColumnSpacing="15">
+                        <!-- Don't have -->
+                        <VerticalStackLayout>
+                            <Frame BackgroundColor="#FFE4E1"
+                                   CornerRadius="25"
+                                   HeightRequest="50"
+                                   WidthRequest="50"
+                                   Padding="0"
+                                   HorizontalOptions="Center">
+                                <Image Source="break_icon.jpeg"
+                                         Aspect="AspectFit"
+                                       Margin="-10,0,0,0"                                     
+                                        HeightRequest="90"
+                                       WidthRequest="90"/>
+                            </Frame>
+                            <Label Text="Don't have"
+                                   TextColor="#6B6B6B"
+                                   HorizontalOptions="Center"/>
+                        </VerticalStackLayout>
+
+                        <!-- Condom option -->
+                        <VerticalStackLayout Grid.Column="1">
+                            <Frame BackgroundColor="#FFE4E1"
+                                   CornerRadius="25"
+                                   HeightRequest="50"
+                                   WidthRequest="50"
+                                   Padding="0"
+                                   HorizontalOptions="Center">
+                                <Image Source="loon_scene.jpeg"
+                                       Aspect="AspectFit"
+                                        Margin="-1,0,0,0"                                     
+                                        HeightRequest="90"
+                                        WidthRequest="100"/>
+                            </Frame>
+                            <Label Text="Condom option"
+                                   TextColor="#6B6B6B"
+                                   HorizontalOptions="Center"/>
+                        </VerticalStackLayout>
+
+                        <!-- Female orgasm -->
+                        <VerticalStackLayout Grid.Column="2">
+                            <Frame BackgroundColor="#FFE4E1"
+                                   CornerRadius="25"
+                                   HeightRequest="50"
+                                   WidthRequest="50"
+                                   Padding="0"
+                                   HorizontalOptions="Center">
+                                <Image Source="smile_face.jpeg"
+                                       Aspect="AspectFit"
+                                       Margin="10,0,0,0"                                     
+                                       HeightRequest="150"
+                                       WidthRequest="90"/>
+                            </Frame>
+                            <Label Text="Female orgasm"
+                                   TextColor="#6B6B6B"
+                                   HorizontalOptions="Center"/>
+                        </VerticalStackLayout>
+
+                        <!-- Times -->
+                        <VerticalStackLayout Grid.Column="3">
+                            <Frame BackgroundColor="#FFE4E1"
+                                   CornerRadius="25"
+                                   HeightRequest="50"
+                                   WidthRequest="50"
+                                   Padding="0"
+                                   HorizontalOptions="Center">
+                                <Label Text="0"
+                                       TextColor="#FF4B91"
+                                       HorizontalOptions="Center"
+                                       VerticalOptions="Center"/>
+                            </Frame>
+                            <Label Text="Times"
+                                   TextColor="#6B6B6B"
+                                   HorizontalOptions="Center"/>
+                        </VerticalStackLayout>
+                    </Grid>
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Add Medicine -->
+            <Frame BackgroundColor="#252542"
+                   Padding="20"
+                   CornerRadius="20"
+                   HasShadow="False">
+                <Grid ColumnDefinitions="*,Auto">
+                    <Label Text="💊 Add medicine"
+                           TextColor="White"
+                           FontSize="18"/>
+                    <Button Grid.Column="1"
+                            Text="+"
+                            TextColor="#FF4B91"
+                            BackgroundColor="Transparent"
+                            FontSize="24"
+                            CornerRadius="15"/>
+                </Grid>
+            </Frame>
+
+            <!-- Pill Reminders -->
+            <Frame BackgroundColor="#252542"
+                   Padding="20"
+                   CornerRadius="20"
+                   HasShadow="False">
+                <VerticalStackLayout Spacing="15">
+                    <Label Text="Pill reminders"
+                           TextColor="White"
+                           FontSize="18"/>
+
+                    <Frame BackgroundColor="#3F3355"
+                           Padding="15"
+                           CornerRadius="15">
+                        <Grid RowSpacing="15">
+                            <Grid ColumnDefinitions="*,Auto">
+                                <Label Text="Good Evening Alita Katlego Contr..."
+                                       TextColor="White"/>
+                                <Button Grid.Column="1"
+                                        Text="..."
+                                        TextColor="White"
+                                        BackgroundColor="Transparent"/>
+                            </Grid>
+
+                            <Label Grid.Row="1"
+                                   Text="19:00"
+                                   TextColor="#6B6B6B"/>
+
+                            <Grid Grid.Row="2" ColumnDefinitions="*,*" ColumnSpacing="15">
+                                <Frame BackgroundColor="#2B2B2B"
+                                       Padding="15"
+                                       CornerRadius="15">
+                                    <Label Text="Take pill"
+                                           TextColor="White"
+                                           HorizontalOptions="Center"/>
+                                </Frame>
+                                <Frame Grid.Column="1"
+                                       BackgroundColor="#2B2B2B"
+                                       Padding="15"
+                                       CornerRadius="15">
+                                    <Label Text="Yesterday's pill"
+                                           TextColor="White"
+                                           HorizontalOptions="Center"/>
+                                </Frame>
+                            </Grid>
+                        </Grid>
+                    </Frame>
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- More Button -->
+            <Button Text="More"
+                    TextColor="#6B6B6B"
+                    BackgroundColor="Transparent"
+                    FontSize="16"/>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

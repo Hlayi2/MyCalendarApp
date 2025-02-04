@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyCalendar.Views.CalendarPage"
+             Title="CalendarPage"
+            BackgroundColor="#1E1E2D">
+
+    <Grid RowDefinitions="Auto,*,Auto,Auto">
+        <!-- Header with Settings and Month/Year Selector -->
+        <Grid Padding="20,10" ColumnDefinitions="Auto,*,Auto">
+            <Image Source="settings.png" 
+                   HeightRequest="24" 
+                   WidthRequest="24"/>
+
+            <Frame Grid.Column="1"
+                   BackgroundColor="#3F3355"
+                   CornerRadius="20"
+                   Padding="5"
+                   HorizontalOptions="Center">
+                <Grid ColumnDefinitions="Auto,Auto">
+                    <Button Text="Feb"
+                            TextColor="White"
+                            BackgroundColor="Transparent"
+                            FontSize="16"
+                            Margin="10,0"/>
+                    <Button Grid.Column="1"
+                            Text="Year"
+                            TextColor="#6B6B6B"
+                            BackgroundColor="Transparent"
+                            FontSize="16"
+                            Margin="10,0"/>
+                </Grid>
+            </Frame>
+
+            <Image Grid.Column="2"
+                   Source="history.png"
+                   HeightRequest="24"
+                   WidthRequest="24"/>
+        </Grid>
+
+        <!-- Calendar Grid -->
+        <Grid Grid.Row="1" Padding="20,10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <!-- Days of Week Header -->
+            <Grid ColumnDefinitions="*,*,*,*,*,*,*">
+                <Label Text="S" TextColor="#6B6B6B" HorizontalOptions="Center"/>
+                <Label Grid.Column="1" Text="M" TextColor="#6B6B6B" HorizontalOptions="Center"/>
+                <Label Grid.Column="2" Text="T" TextColor="#6B6B6B" HorizontalOptions="Center"/>
+                <Label Grid.Column="3" Text="W" TextColor="#6B6B6B" HorizontalOptions="Center"/>
+                <Label Grid.Column="4" Text="T" TextColor="#6B6B6B" HorizontalOptions="Center"/>
+                <Label Grid.Column="5" Text="F" TextColor="#6B6B6B" HorizontalOptions="Center"/>
+                <Label Grid.Column="6" Text="S" TextColor="#6B6B6B" HorizontalOptions="Center"/>
+            </Grid>
+            
+
+            <!-- Calendar Days -->
+            <CollectionView Grid.Row="1" 
+                          ItemsSource="{Binding CalendarDays}"
+                          Margin="0,10">
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout Orientation="Vertical"
+                                   Span="7"
+                                   HorizontalItemSpacing="5"
+                                   VerticalItemSpacing="5"/>
+                </CollectionView.ItemsLayout>
+
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Padding="2">
+                            <Frame BackgroundColor="{Binding Background}"
+                                   HeightRequest="60"
+                                   CornerRadius="10"
+                                   Padding="5"
+                                   HasShadow="False">
+                                <Grid RowDefinitions="Auto,*,Auto">
+                                    <Label Text="{Binding DayNumber}"
+                                           TextColor="{Binding TextColor}"
+                                           HorizontalOptions="Start"
+                                           Margin="5,0,0,0"/>
+
+                                    <Label Grid.Row="2"
+                                           Text="{Binding CycleDay}"
+                                           TextColor="#6B6B6B"
+                                           FontSize="12"
+                                           HorizontalOptions="End"
+                                           Margin="0,0,5,0"/>
+
+                                    <!-- Period Dot Indicator -->
+                                    <Frame IsVisible="{Binding HasPeriod}"
+                                           Grid.Row="1"
+                                           BackgroundColor="#FF4B91"
+                                           HeightRequest="8"
+                                           WidthRequest="8"
+                                           CornerRadius="4"
+                                           HorizontalOptions="End"
+                                           VerticalOptions="Start"
+                                           Margin="0,2,2,0"
+                                           Padding="0"/>
+                                </Grid>
+                            </Frame>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </Grid>
+
+        <!-- Action Buttons -->
+        <Grid Grid.Row="2" 
+              Padding="20,10"
+              ColumnDefinitions="*,*"
+              ColumnSpacing="20">
+            <Button Text="EDIT PERIOD"
+                    BackgroundColor="#2B2B2B"
+                    TextColor="#FF4B91"
+                    CornerRadius="10"
+                    HeightRequest="50"/>
+            <Button Grid.Column="1"
+                    Text="ADD NOTE"
+                    BackgroundColor="#2B2B2B"
+                    TextColor="#6B4CD3"
+                    CornerRadius="10"
+                    HeightRequest="50"/>
+        </Grid>
+
+        <!-- Notes Section -->
+        <VerticalStackLayout Grid.Row="3" 
+                            Padding="20,10">
+            <Grid ColumnDefinitions="*,Auto">
+                <Label Text="Feb 3" 
+                       TextColor="White"
+                       FontSize="18"/>
+                <StackLayout Grid.Column="1" 
+                            Orientation="Horizontal">
+                    <Label Text="Cycle day 15"
+                           TextColor="#6B6B6B"/>
+                    <Image Source="info.png"
+                           HeightRequest="16"
+                           WidthRequest="16"
+                           Margin="5,0,0,0"/>
+                </StackLayout>
+            </Grid>
+
+            <VerticalStackLayout Spacing="10" Margin="0,10">
+                <Label Text="Good Evening Alita Katle..."
+                       TextColor="#FF69B4"/>
+                <Label Text="High - chance of getting pregnant"
+                       TextColor="#9370DB"/>
+            </VerticalStackLayout>
+        </VerticalStackLayout>
+    </Grid>
+</ContentPage>

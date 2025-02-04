@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyCalendar.Views.MainPage"
+             Title="MainPage"
+             BackgroundColor="#1E1E2D">
+
+    <Grid RowDefinitions="Auto,*">
+        <!-- Header -->
+        <Grid Padding="20,10" ColumnDefinitions="Auto,*,Auto">
+            <Image Source="settings.png" 
+                   HeightRequest="24" 
+                   WidthRequest="24"/>
+            <Label Grid.Column="1" 
+                   Text="Feb 3" 
+                   TextColor="White"
+                   FontSize="20"
+                   HorizontalOptions="Center"/>
+            <Image Grid.Column="2" 
+                   Source="notification.png"
+                   HeightRequest="24" 
+                   WidthRequest="24"/>
+        </Grid>
+
+        <ScrollView Grid.Row="1">
+            <VerticalStackLayout Spacing="20" Padding="20">
+                <!-- Status Banner -->
+                <Frame BackgroundColor="#3F3355" 
+                       Padding="15" 
+                       HasShadow="False" 
+                       CornerRadius="8">
+                    <Label Text="High chance of getting pregnant"
+                           TextColor="White"
+                           HorizontalOptions="Center"/>
+                </Frame>
+
+                <!-- Ovulation Status -->
+                <VerticalStackLayout Spacing="10">
+                    <Label Text="Ovulation" 
+                           TextColor="White"
+                           FontSize="36"
+                           HorizontalOptions="Center"/>
+                    <Label Text="day" 
+                           TextColor="White"
+                           FontSize="36"
+                           HorizontalOptions="Center"/>
+                    <Label Text="Next period: 14 days left"
+                           TextColor="LightGray"
+                           HorizontalOptions="Center"/>
+                </VerticalStackLayout>
+
+                <!-- Period Start Button -->
+                <Button Text="Period Starts"
+                        BackgroundColor="#FF4B91"
+                        TextColor="White"
+                        CornerRadius="20"
+                        HeightRequest="45"
+                        Margin="40,10"/>
+
+                <!-- Horizontal ScrollView for Cards -->
+                <ScrollView Orientation="Horizontal" 
+                           HorizontalScrollBarVisibility="Never">
+                    <HorizontalStackLayout Spacing="15">
+                        <!-- Cycle Day Card -->
+                        <Frame BackgroundColor="#6B4CD3"
+                               WidthRequest="150"
+                               HeightRequest="150"
+                               Padding="15"
+                               CornerRadius="15">
+                            <VerticalStackLayout>
+                                <Label Text="CYCLE DAY"
+                                       TextColor="White"
+                                       FontSize="16"/>
+                                <Label Text="15"
+                                       TextColor="White"
+                                       FontSize="32"
+                                       Margin="0,10"/>
+                            </VerticalStackLayout>
+                        </Frame>
+
+                        <!-- Irregular Periods Card -->
+                        <Frame BackgroundColor="#FFF0F5"
+                               WidthRequest="150"
+                               HeightRequest="150"
+                               Padding="15"
+                               CornerRadius="15">
+                            <VerticalStackLayout>
+                                <Label Text="What Are Irregular Periods?"
+                                       TextColor="#1C1B1F"
+                                       FontSize="16"/>
+                            </VerticalStackLayout>
+                        </Frame>
+
+                        <!-- How to Restart Card -->
+                        <Frame BackgroundColor="#FFF0F5"
+                               WidthRequest="150"
+                               HeightRequest="150"
+                               Padding="15"
+                               CornerRadius="15">
+                            <VerticalStackLayout>
+                                <Label Text="How to Restart Your Periods Naturally?"
+                                       TextColor="#1C1B1F"
+                                       FontSize="16"/>
+                            </VerticalStackLayout>
+                        </Frame>
+                    </HorizontalStackLayout>
+                </ScrollView>
+
+                <!-- Hormone Levels Section -->
+                <VerticalStackLayout Spacing="10">
+                    <Label Text="Today's Hormones Levels"
+                           TextColor="White"
+                           FontSize="24"/>
+                    <Label Text="It's a busy day for hormonal changes. Once ovulation takes place, estrogen levels begin"
+                           TextColor="LightGray"/>
+                </VerticalStackLayout>
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
+
+</ContentPage>

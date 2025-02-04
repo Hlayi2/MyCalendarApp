@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyCalendar.Views.SelfCarePage"
+             Title="SelfCarePage"
+             BackgroundColor="#1E1E2D">
+    <ScrollView>
+        <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto" Padding="20">
+            <!-- Header -->
+            <Grid ColumnDefinitions="Auto,*,Auto">
+                <Image Source="settings.png" 
+                       HeightRequest="24"/>
+                <Label Grid.Column="1"
+                       Text="Self Care"
+                       TextColor="White"
+                       FontSize="24"
+                       HorizontalOptions="Center"/>
+            </Grid>
+
+            <!-- Category Buttons -->
+            <ScrollView Grid.Row="1" 
+                       Orientation="Horizontal"
+                       Margin="0,20,0,0"
+                       HorizontalScrollBarVisibility="Never">
+                <HorizontalStackLayout Spacing="10">
+                    <Button Text="Discover"
+                            BackgroundColor="#FF4B91"
+                            TextColor="White"
+                            CornerRadius="20"
+                            Padding="20,10"/>
+                    <Button Text="Period"
+                            BackgroundColor="#2B2B2B"
+                            TextColor="White"
+                            CornerRadius="20"
+                            Padding="20,10"/>
+                    <Button Text="Symptoms"
+                            BackgroundColor="#2B2B2B"
+                            TextColor="White"
+                            CornerRadius="20"
+                            Padding="20,10"/>
+                    <Button Text="Better Sleep"
+                            BackgroundColor="#2B2B2B"
+                            TextColor="White"
+                            CornerRadius="20"
+                            Padding="20,10"/>
+                </HorizontalStackLayout>
+            </ScrollView>
+
+            <!-- Soundscapes Section -->
+            <VerticalStackLayout Grid.Row="2" Spacing="15" Margin="0,20,0,0">
+                <Label Text="Soundscapes"
+                       TextColor="White"
+                       FontSize="20"/>
+
+                <ScrollView Orientation="Horizontal" 
+                           HorizontalScrollBarVisibility="Never">
+                    <HorizontalStackLayout Spacing="15">
+                        <!-- Forest Adventure -->
+                        <Frame CornerRadius="75" 
+                               HeightRequest="150" 
+                               WidthRequest="150"
+                               Padding="0"
+                               IsClippedToBounds="True">
+                            <Grid>
+                                <Image Source="forest_adventure.jpeg"
+                                       Aspect="AspectFill"/>
+                                <VerticalStackLayout VerticalOptions="Center"
+                                                   HorizontalOptions="Center">
+                                    <Image Source="play.png" 
+                                           HeightRequest="30"
+                                           WidthRequest="30"/>
+                                    <Label Text="Forest"
+                                           TextColor="White"
+                                           HorizontalOptions="Center"/>
+                                    <Label Text="Adventure"
+                                           TextColor="White"
+                                           HorizontalOptions="Center"/>
+                                </VerticalStackLayout>
+                            </Grid>
+                        </Frame>
+
+                        <!-- Forest Rain -->
+                        <Frame CornerRadius="75" 
+                               HeightRequest="150" 
+                               WidthRequest="150"
+                               Padding="0"
+                               IsClippedToBounds="True">
+                            <Grid>
+                                <Image Source="rain_forest.jpeg"
+                                       Aspect="AspectFill"/>
+                                <VerticalStackLayout VerticalOptions="Center"
+                                                   HorizontalOptions="Center">
+                                    <Image Source="play.png" 
+                                           HeightRequest="30"
+                                           WidthRequest="30"/>
+                                    <Label Text="Forest"
+                                           TextColor="White"
+                                           HorizontalOptions="Center"/>
+                                    <Label Text="Rain"
+                                           TextColor="White"
+                                           HorizontalOptions="Center"/>
+                                </VerticalStackLayout>
+                            </Grid>
+                        </Frame>
+
+                        <!-- Peaceful Night -->
+                        <Frame CornerRadius="75" 
+                               HeightRequest="140" 
+                               WidthRequest="140"
+                               Padding="0"
+                               IsClippedToBounds="True">
+                            <Grid>
+                                <Image Source="night_peaceful.jpeg"
+                                       Aspect="AspectFill"
+                                       Margin="20,0,0,0"                                     
+                                       HeightRequest="150"
+                                       WidthRequest="150"/>
+                                <VerticalStackLayout VerticalOptions="Center"
+                                                   HorizontalOptions="Center">
+                                    <Image Source="play.png" 
+                                           HeightRequest="50"
+                                           WidthRequest="50"/>
+                                    <Label Text="Peaceful"
+                                           TextColor="White"
+                                           HorizontalOptions="Center"/>
+                                    <Label Text="Night"
+                                           TextColor="White"
+                                           HorizontalOptions="Center"/>
+                                </VerticalStackLayout>
+                            </Grid>
+                        </Frame>
+                    </HorizontalStackLayout>
+                </ScrollView>
+            </VerticalStackLayout>
+
+            <!-- Menstrual cramps relief -->
+            <VerticalStackLayout Grid.Row="3" Spacing="15" Margin="0,20,0,0">
+                <Label Text="Menstrual cramps relief"
+                       TextColor="White"
+                       FontSize="20"/>
+
+                <Grid ColumnDefinitions="*,*" ColumnSpacing="15">
+                    <!-- Period pain relief -->
+                    <Frame BackgroundColor="#FFE5B4"
+                           CornerRadius="20"
+                           Padding="15">
+                        <Grid RowDefinitions="*,Auto">
+                            <Image Source="pain_relief.jpeg"
+                                   Aspect="AspectFill"
+                                   Margin="10,0,0,0"                                     
+                                   HeightRequest="150"
+                                   WidthRequest="90"/>
+                            <VerticalStackLayout Grid.Row="1">
+                                <Label Text="Period"
+                                       TextColor="Black"/>
+                                <Label Text="pain relief"
+                                       TextColor="Black"/>
+                                <Image Source="play.png"
+                                       HeightRequest="30"
+                                       WidthRequest="30"
+                                       HorizontalOptions="Start"/>
+                            </VerticalStackLayout>
+                        </Grid>
+                    </Frame>
+
+                    <!-- Foot massage -->
+                    <Frame Grid.Column="1"
+                           BackgroundColor="#FFE5B4"
+                           CornerRadius="20"
+                           Padding="15">
+                        <Grid RowDefinitions="*,Auto">
+                            <Image Source="foot_massage.jpeg"
+                                   Aspect="AspectFill"
+                                   Margin="10,0,0,0"                                     
+                                    HeightRequest="150"
+                                    WidthRequest="90"/>
+                            <VerticalStackLayout Grid.Row="1">
+                                <Label Text="Foot massage"
+                                       TextColor="Black"/>
+                                <Label Text="to relieve cramps"
+                                       TextColor="Black"/>
+                                <Image Source="play.png"
+                                       HeightRequest="30"
+                                       WidthRequest="30"
+                                       HorizontalOptions="Start"/>
+                            </VerticalStackLayout>
+                        </Grid>
+                    </Frame>
+                </Grid>
+            </VerticalStackLayout>
+
+            <!-- Hormonal balance -->
+            <VerticalStackLayout Grid.Row="4" Spacing="15" Margin="0,20,0,0">
+                <Label Text="Hormonal balance"
+                       TextColor="White"
+                       FontSize="20"/>
+
+                <Grid ColumnDefinitions="*,*" ColumnSpacing="15">
+                    <!-- PMS relief -->
+                    <Frame BackgroundColor="#FFE6E6"
+                           CornerRadius="20"
+                           Padding="15">
+                        <Grid RowDefinitions="*,Auto">
+                            <Image Source="pain_relief.jpeg"
+                                   Aspect="AspectFill"/>
+                            <VerticalStackLayout Grid.Row="1">
+                                <Label Text="PMS relief"
+                                       TextColor="Black"/>
+                                <Label Text="flow"
+                                       TextColor="Black"/>
+                                <Image Source="play.png"
+                                       HeightRequest="30"
+                                       WidthRequest="30"
+                                       HorizontalOptions="Start"/>
+                            </VerticalStackLayout>
+                        </Grid>
+                    </Frame>
+
+                    <!-- PCOS workout -->
+                    <Frame Grid.Column="1"
+                           BackgroundColor="#FFE6E6"
+                           CornerRadius="20"
+                           Padding="15">
+                        <Grid RowDefinitions="*,Auto">
+                            <Image Source="pcos_workout.png"
+                                   Aspect="AspectFill"/>
+                            <VerticalStackLayout Grid.Row="1">
+                                <Label Text="PCOS"
+                                       TextColor="Black"/>
+                                <Label Text="workout"
+                                       TextColor="Black"/>
+                                <Image Source="play.png"
+                                       HeightRequest="30"
+                                       WidthRequest="30"
+                                       HorizontalOptions="Start"/>
+                            </VerticalStackLayout>
+                        </Grid>
+                    </Frame>
+                </Grid>
+            </VerticalStackLayout>
+        </Grid>
+    </ScrollView>
+</ContentPage>
