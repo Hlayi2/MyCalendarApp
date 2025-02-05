@@ -8,7 +8,7 @@
         <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto" Padding="20">
             <!-- Header -->
             <Grid ColumnDefinitions="Auto,*,Auto">
-                <Image Source="settings.png" 
+                <Image Source="setting.png" 
                        HeightRequest="24"/>
                 <Label Grid.Column="1"
                        Text="Self Care"
@@ -62,19 +62,17 @@
                                Padding="0"
                                IsClippedToBounds="True">
                             <Grid>
-                                <Image Source="forest_adventure.jpeg"
-                                       Aspect="AspectFill"/>
+                                <Image Source="forest_advanture.jpeg"
+                                       Aspect="AspectFill"
+                                       Margin="1,0,0,0"
+                                       WidthRequest="200"
+                                       HeightRequest="200"/>
                                 <VerticalStackLayout VerticalOptions="Center"
                                                    HorizontalOptions="Center">
                                     <Image Source="play.png" 
                                            HeightRequest="30"
                                            WidthRequest="30"/>
-                                    <Label Text="Forest"
-                                           TextColor="White"
-                                           HorizontalOptions="Center"/>
-                                    <Label Text="Adventure"
-                                           TextColor="White"
-                                           HorizontalOptions="Center"/>
+                                   
                                 </VerticalStackLayout>
                             </Grid>
                         </Frame>
@@ -87,18 +85,16 @@
                                IsClippedToBounds="True">
                             <Grid>
                                 <Image Source="rain_forest.jpeg"
-                                       Aspect="AspectFill"/>
+                                       Aspect="AspectFill"
+                                        Margin="9,0,0,0"
+                                       WidthRequest="200"
+                                       HeightRequest="200"/>
                                 <VerticalStackLayout VerticalOptions="Center"
                                                    HorizontalOptions="Center">
                                     <Image Source="play.png" 
                                            HeightRequest="30"
                                            WidthRequest="30"/>
-                                    <Label Text="Forest"
-                                           TextColor="White"
-                                           HorizontalOptions="Center"/>
-                                    <Label Text="Rain"
-                                           TextColor="White"
-                                           HorizontalOptions="Center"/>
+                                   
                                 </VerticalStackLayout>
                             </Grid>
                         </Frame>
@@ -113,19 +109,14 @@
                                 <Image Source="night_peaceful.jpeg"
                                        Aspect="AspectFill"
                                        Margin="20,0,0,0"                                     
-                                       HeightRequest="150"
-                                       WidthRequest="150"/>
+                                       HeightRequest="200"
+                                       WidthRequest="200"/>
                                 <VerticalStackLayout VerticalOptions="Center"
                                                    HorizontalOptions="Center">
                                     <Image Source="play.png" 
                                            HeightRequest="50"
                                            WidthRequest="50"/>
-                                    <Label Text="Peaceful"
-                                           TextColor="White"
-                                           HorizontalOptions="Center"/>
-                                    <Label Text="Night"
-                                           TextColor="White"
-                                           HorizontalOptions="Center"/>
+                                  
                                 </VerticalStackLayout>
                             </Grid>
                         </Frame>
@@ -147,9 +138,7 @@
                         <Grid RowDefinitions="*,Auto">
                             <Image Source="pain_relief.jpeg"
                                    Aspect="AspectFill"
-                                   Margin="10,0,0,0"                                     
-                                   HeightRequest="150"
-                                   WidthRequest="90"/>
+                                   />
                             <VerticalStackLayout Grid.Row="1">
                                 <Label Text="Period"
                                        TextColor="Black"/>
@@ -171,9 +160,7 @@
                         <Grid RowDefinitions="*,Auto">
                             <Image Source="foot_massage.jpeg"
                                    Aspect="AspectFill"
-                                   Margin="10,0,0,0"                                     
-                                    HeightRequest="150"
-                                    WidthRequest="90"/>
+                                  />
                             <VerticalStackLayout Grid.Row="1">
                                 <Label Text="Foot massage"
                                        TextColor="Black"/>
@@ -201,7 +188,7 @@
                            CornerRadius="20"
                            Padding="15">
                         <Grid RowDefinitions="*,Auto">
-                            <Image Source="pain_relief.jpeg"
+                            <Image Source="relief_flow.jpeg"
                                    Aspect="AspectFill"/>
                             <VerticalStackLayout Grid.Row="1">
                                 <Label Text="PMS relief"
@@ -222,7 +209,7 @@
                            CornerRadius="20"
                            Padding="15">
                         <Grid RowDefinitions="*,Auto">
-                            <Image Source="pcos_workout.png"
+                            <Image Source="workout_p.png"
                                    Aspect="AspectFill"/>
                             <VerticalStackLayout Grid.Row="1">
                                 <Label Text="PCOS"

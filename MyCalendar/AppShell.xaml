@@ -33,10 +33,10 @@
         <Tab Title="Calendar" Icon="calendar.png">
             <ShellContent ContentTemplate="{DataTemplate local:CalendarPage}"/>
         </Tab>
-        <Tab Title="+" Icon="plus.png">
+        <Tab Title="" Icon="add.png">
             <ShellContent ContentTemplate="{DataTemplate local:AddPage}"/>
         </Tab>
-        <Tab Title="Self Care" Icon="selfcare.png">
+        <Tab Title="Self Care" Icon="heart.png">
             <ShellContent ContentTemplate="{DataTemplate local:SelfCarePage}"/>
         </Tab>
         <Tab Title="Mine" Icon="profile.png">

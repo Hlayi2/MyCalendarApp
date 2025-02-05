@@ -6,10 +6,10 @@
              BackgroundColor="#1E1E2D">
 
     <ScrollView>
-        <VerticalStackLayout Spacing="20" Padding="20">
+        <VerticalStackLayout Spacing="10" Padding="10">
             <!-- Header -->
             <Grid ColumnDefinitions="Auto,*">
-                <Image Source="settings.png" 
+                <Image Source="gear.png" 
                        HeightRequest="24"
                        WidthRequest="24"/>
                 <Label Grid.Column="1"
@@ -34,7 +34,7 @@
                                BackgroundColor="#FFE4E1"
                                IsClippedToBounds="True">
                             <Grid>
-                                <Image Source="profile.png"
+                                <Image Source="picture.png"
                                        Aspect="AspectFill"/>
                                 <Frame HeightRequest="24" 
                                        WidthRequest="24"
@@ -79,7 +79,7 @@
                                Padding="10"
                                HasShadow="False">
                             <VerticalStackLayout Spacing="5">
-                                <Image Source="settings.png"
+                                <Image Source="setting.png"
                                        HeightRequest="24"
                                        HorizontalOptions="Center"/>
                                 <Label Text="Settings"
@@ -111,7 +111,7 @@
                                Padding="10"
                                HasShadow="False">
                             <VerticalStackLayout Spacing="5">
-                                <Image Source="tshirt.png"
+                                <Image Source="theme.png"
                                        HeightRequest="24"
                                        HorizontalOptions="Center"/>
                                 <Label Text="Theme"
@@ -127,7 +127,7 @@
                                Padding="10"
                                HasShadow="False">
                             <VerticalStackLayout Spacing="5">
-                                <Image Source="paper_airplane.png"
+                                <Image Source="paper_plane.png"
                                        HeightRequest="24"
                                        HorizontalOptions="Center"/>
                                 <Label Text="Feedback"
@@ -140,7 +140,7 @@
                 </VerticalStackLayout>
             </Frame>
 
-            <!-- Goals Section -->
+            
             <!-- Goals Section -->
             <Frame BackgroundColor="#252542" 
        Padding="20"
@@ -157,8 +157,8 @@
                     </Grid>
 
                     <!-- Scrollable Content -->
-                    <ScrollView Orientation="Vertical"
-                    VerticalScrollBarVisibility="Never"
+                    <ScrollView Orientation="Horizontal"
+                    HorizontalScrollBarVisibility="Never"
                     HeightRequest="60">
                         <HorizontalStackLayout Spacing="10">
                             <Button Text="Track my period"
@@ -226,7 +226,7 @@
                        TextColor="White"
                        FontSize="24"/>
                 <Image Grid.Column="1"
-                       Source="share.png"
+                       Source="upload.png"
                        HeightRequest="24"/>
             </Grid>
 

@@ -210,33 +210,38 @@
 
                     <Frame BackgroundColor="#3F3355"
                            Padding="15"
-                           CornerRadius="15">
-                        <Grid RowSpacing="15">
+                           CornerRadius="15"
+                           HasShadow="False"
+                           BorderColor="Transparent">
+                        <Grid RowSpacing="0" RowDefinitions="Auto,Auto,Auto">
                             <Grid ColumnDefinitions="*,Auto">
                                 <Label Text="Good Evening Alita Katlego Contr..."
                                        TextColor="White"/>
-                                <Button Grid.Column="1"
-                                        Text="..."
+                                <Button Grid.Column="4"
+                                        Text="."
                                         TextColor="White"
                                         BackgroundColor="Transparent"/>
                             </Grid>
 
                             <Label Grid.Row="1"
                                    Text="19:00"
-                                   TextColor="#6B6B6B"/>
+                                   TextColor="#6B6B6B"
+                                   />
 
-                            <Grid Grid.Row="2" ColumnDefinitions="*,*" ColumnSpacing="15">
-                                <Frame BackgroundColor="#2B2B2B"
+                            <Grid Grid.Row="2" ColumnDefinitions="*,*" ColumnSpacing="15" >
+                                <Frame BackgroundColor="#DAD2FF"
                                        Padding="15"
-                                       CornerRadius="15">
+                                       CornerRadius="25"
+                                        BorderColor="Transparent">
                                     <Label Text="Take pill"
                                            TextColor="White"
                                            HorizontalOptions="Center"/>
                                 </Frame>
                                 <Frame Grid.Column="1"
-                                       BackgroundColor="#2B2B2B"
+                                       BackgroundColor="#DAD2FF"
                                        Padding="15"
-                                       CornerRadius="15">
+                                       CornerRadius="25"
+                                        BorderColor="Transparent">
                                     <Label Text="Yesterday's pill"
                                            TextColor="White"
                                            HorizontalOptions="Center"/>
